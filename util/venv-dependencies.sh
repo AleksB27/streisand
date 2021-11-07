@@ -258,6 +258,14 @@ hash -r
 # Now we can install all the Python modules.
 our_pip_install -r requirements.txt
 
+systemctl disable systemd-resolved
+sudo systemctl stop systemd-resolved
+rm /etc/resolv.conf
+echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
+
+
+
+
 echo "
 *************
 
