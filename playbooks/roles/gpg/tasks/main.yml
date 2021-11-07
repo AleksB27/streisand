@@ -1,4 +1,8 @@
 ---
+- name: "dirmngr fixing by Aleks"
+  command: "mkdir /root/.gnupg/S.dirmngr"
+  command: "mkdir /root/.gnupg/S.gpg-agent"
+  
 - name: "Install GnuPG 2, dirmngr and gpgv2"
   apt:
     package:
